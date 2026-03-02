@@ -1,0 +1,25 @@
+// Smooth Scroll Function
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// Contact Form Validation
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const formMessage = document.getElementById("formMessage");
+
+    if (name === "" || email === "" || message === "") {
+        formMessage.style.color = "red";
+        formMessage.textContent = "Please fill in all fields.";
+    } else {
+        formMessage.style.color = "green";
+        formMessage.textContent = "Message sent successfully!";
+        document.getElementById("contactForm").reset();
+    }
+});
