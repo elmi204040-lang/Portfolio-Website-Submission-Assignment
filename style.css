@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #0f172a;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: #38bdf8;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #0284c7;
+}
+
+/* Sections */
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.dark .card {
+    background: #1e293b;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Contact */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 12px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #334155;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header ul {
+        margin-top: 10px;
+    }
+}
